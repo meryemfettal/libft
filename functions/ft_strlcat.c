@@ -6,7 +6,7 @@
 /*   By: mfettal <mfettal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 16:42:06 by mfettal           #+#    #+#             */
-/*   Updated: 2022/10/20 16:22:01 by mfettal          ###   ########.fr       */
+/*   Updated: 2022/10/22 16:56:25 by mfettal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,11 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	sl;
 	size_t	dl;
 
-	sl = (int)ft_strlen(src);
-	dl = (int)ft_strlen(dst);
+	sl = ft_strlen(src);
+	dl = ft_strlen(dst);
 	i = 0;
+	if (!src || !dst)
+		return (dl);
 	if(dl < dstsize)
 		result = sl + dl;
 	else
@@ -41,8 +43,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 }
 // int main()
 // {
-// 	char s[] = "geeksforgeeks";
+// 	char *s = NULL;
 // 	char d[40] = "hello world";
-// 	printf("%zu", ft_strlcat(d, s, 40));
+// 	printf("%zu", strlcat(d, s, 0));
 // 	return (0);
 // }
