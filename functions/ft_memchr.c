@@ -6,7 +6,7 @@
 /*   By: mfettal <mfettal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 16:31:45 by mfettal           #+#    #+#             */
-/*   Updated: 2022/10/19 14:26:08 by mfettal          ###   ########.fr       */
+/*   Updated: 2022/10/27 10:50:11 by mfettal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,14 @@ void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t			i;
 	unsigned char	*ptr;
-	unsigned char	C;
+	unsigned char	tmp;
 
 	i = 0;
 	ptr = (unsigned char *)s;
-	C = (unsigned char)c;
+	tmp = (unsigned char)c;
 	while (i < n)
 	{
-		if (ptr[i] == C)
+		if (ptr[i] == tmp)
 		{
 			return (&ptr[i]);
 		}

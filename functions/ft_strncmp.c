@@ -5,25 +5,37 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfettal <mfettal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/12 15:27:33 by mfettal           #+#    #+#             */
-/*   Updated: 2022/10/22 16:21:47 by mfettal          ###   ########.fr       */
+/*   Created: 2022/10/26 10:36:22 by mfettal           #+#    #+#             */
+/*   Updated: 2022/10/27 09:38:44 by mfettal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "libft.h"
+#include "libft.h"
 
-// int	ft_strncmp(const char *s1, const char *s2, size_t n)
-// {
-// 	size_t	i;
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
+{
+	size_t			i;
+	unsigned char	*str1;
+	unsigned char	*str2;
 
-// 	i = 0;
-
-
+	str1 = (unsigned char *)s1;
+	str2 = (unsigned char *)s2;
+	i = 0;
+	if (!n)
+		return (0);
+	while (i < n && (str1[i] || str2[i]))
+	{
+		if (str1[i] != str2[i])
+			return (str1[i] - str2[i]);
+		i++;
+	}
+	return (0);
+}
 // int main()
 // {
-// 	char s1[10] = "memf";
-// 	char s2[10] = "memEk";
-// 	printf("%d\n", ft_strncmp(s1, s2, 5));
-// 	printf("%d", strncmp(s1, s2, 5));
+// 	char *d = "";
+// 	char *s = "AAAAAA";
+// 	printf("%d\n", ft_strncmp(s, d, 6));
+// 	printf("%d\n", strncmp(s, d, 6));
 // 	return (0);
 // }
