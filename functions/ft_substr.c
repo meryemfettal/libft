@@ -1,40 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfettal <mfettal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/06 15:29:35 by mfettal           #+#    #+#             */
-/*   Updated: 2022/10/26 13:00:06 by mfettal          ###   ########.fr       */
+/*   Created: 2022/10/27 10:12:40 by mfettal           #+#    #+#             */
+/*   Updated: 2022/10/27 12:45:35 by mfettal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t			i;
-	unsigned char	*cs;
-	unsigned char	*cd;
+	char			*tmp;
 
 	i = 0;
-	if (!dest && !src)
+	if (!s)
 		return (NULL);
-	cs = (unsigned char *)src;
-	cd = (unsigned char *)dest;
-	while (i < n)
+	if (start >= ft_strlen(s))
+		return ((char *)ft_calloc(1, sizeof(char)));
+	if (ft_strlen(s) <= start + len)
+		tmp = malloc((ft_strlen(s) - start + 1) * sizeof(char));
+	else
+		tmp = malloc((len + 1) * sizeof(char));
+	if (!tmp)
+		return (NULL);
+	while (i < len && s[start])
 	{
-		cd[i] = cs[i];
-		i++;
+			tmp[i] = s[start];
+			i++;
+			start++;
 	}
-	return (cd);
+	tmp[i] = '\0';
+	return (tmp);
 }
+
 // int main()
 // {
-// 	char c[] = "geeksforgeeks";
-// 	char d[] = "1337";
-// 	ft_memcpy(d ,c + 3, 6);
-// 	printf("%s",d);
+// 	char *s = ft_substr("tripouille", 0, 42000);
+// 	printf("%s",s);
 // 	return (0);
 // }

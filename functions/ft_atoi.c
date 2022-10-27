@@ -6,7 +6,7 @@
 /*   By: mfettal <mfettal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 12:32:29 by mfettal           #+#    #+#             */
-/*   Updated: 2022/10/17 11:47:40 by mfettal          ###   ########.fr       */
+/*   Updated: 2022/10/27 09:34:41 by mfettal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	ft_atoi(const char *str)
 }
 // int main()
 // {
-// 	char *s = NULL;
+// 	char *s = "-9223372036854775809";
 // 	printf("%d\n", ft_atoi(s));
 // 	printf("%d", atoi(s));
 // 	return (0);

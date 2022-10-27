@@ -6,7 +6,7 @@
 /*   By: mfettal <mfettal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 20:20:56 by mfettal           #+#    #+#             */
-/*   Updated: 2022/10/19 17:54:34 by mfettal          ###   ########.fr       */
+/*   Updated: 2022/10/27 09:38:26 by mfettal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 			dst[i] = src[i];
 			i++;
 		}
-		dst[i] =  '\0';
+		dst[i] = '\0';
 	}
 	return (sl);
 }

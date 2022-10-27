@@ -1,42 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfettal <mfettal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/18 17:04:11 by mfettal           #+#    #+#             */
-/*   Updated: 2022/10/26 16:22:34 by mfettal          ###   ########.fr       */
+/*   Created: 2022/10/27 12:51:18 by mfettal           #+#    #+#             */
+/*   Updated: 2022/10/27 15:32:33 by mfettal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*k;
-	size_t	i;
-	char	*m;
+	char	*tmp;
+	int		i;
+	int		s1l;
+	int		s2l;
 
-	i = 0;
-	m = (char *)s1;
-	k = (char *)malloc((ft_strlen(m) + 1) * sizeof(char));
-	if (!k)
+	s1l = ft_strlen(s1);
+	s2l = ft_strlen(s2);
+	tmp = malloc((s1l + s2l) * sizeof(char));
+	if (!tmp)
 		return (NULL);
-	while (i < ft_strlen(m))
+	i = 0;
+	while (i < s1l)
 	{
-		k[i] = m[i];
+		tmp[i] = s1[i];
 		i++;
 	}
-	k[i] = '\0';
-	return (k);
+	i = 0;
+	while ((s1l + i) < s1l + s2l)
+	{
+		tmp[s1l + i] = s2[i];
+		i++;
+	}
+	tmp[s1l + i] = '\0';
+	return (tmp);
 }
 // int main()
 // {
-// 	char s[20] = "";
-// 	char *s = NULL;
-// 	char *d;
-// 	d = ft_strdup(s);
-// 	printf("%s", d);
+// 	char *s1 = "geeks";
+// 	char *s2 = "forgeeks";
+// 	printf("%s", ft_strjoin(s1,s2));
 // 	return (0);
 // }
