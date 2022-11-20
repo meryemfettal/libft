@@ -1,41 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfettal <mfettal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/11 18:41:13 by mfettal           #+#    #+#             */
-/*   Updated: 2022/11/05 12:18:12 by mfettal          ###   ########.fr       */
+/*   Created: 2022/11/01 17:42:36 by mfettal           #+#    #+#             */
+/*   Updated: 2022/11/16 17:43:24 by mfettal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+// char	f(unsigned int n, char s)
+// {
+// 	(void)n;
+// 	if (s >= 65 && s <= 90)
+// 		s += 32;
+// 	return (s);
+// }
+
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	int		i;
-	char	*tmp;
+	int		len;
+	char	*str;
 
-	tmp = (char *)s;
+	if (!s)
+		return (NULL);
 	i = 0;
-	if ((char)c == 0)
-		return (tmp + ft_strlen(tmp));
-	while (tmp[i])
+	len = ft_strlen(s) + 1;
+	str = malloc(sizeof(char) * len);
+	if (!str)
+		return (NULL);
+	while (s[i])
 	{
-		if (tmp[i] == (char)c)
-		{
-			return (&tmp[i]);
-		}
+		str[i] = f(i, s[i]);
 		i++;
 	}
-	return (NULL);
+	str[i] = '\0';
+	return (str);
 }
 
 // int main ()
 // {
-//    char str[] = "tripouille";
-//    char ch = 0;
-//    printf("%s",ft_strchr(str, ch));
-//    return(0);
+// 	char s[] = "meRyeM";
+// 	char *r = ft_strmapi(s, f);
+// 	printf("%s\n%s\n",s, r);
+// 	return (0);
 // }

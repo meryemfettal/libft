@@ -6,7 +6,7 @@
 /*   By: mfettal <mfettal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 12:51:18 by mfettal           #+#    #+#             */
-/*   Updated: 2022/10/29 15:48:29 by mfettal          ###   ########.fr       */
+/*   Updated: 2022/11/05 12:07:57 by mfettal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,14 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	s1l = ft_strlen(s1);
 	s2l = ft_strlen(s2);
-	tmp = malloc((s1l + s2l) * sizeof(char));
+	tmp = malloc((s1l + s2l + 1) * sizeof(char));
 	if (!tmp)
 		return (NULL);
 	i = 0;
-	while (i++ < s1l)
+	while (i < s1l)
 	{
 		tmp[i] = s1[i];
+		i++;
 	}
 	i = 0;
 	while ((s1l + i) < s1l + s2l)
@@ -37,8 +38,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		tmp[s1l + i] = s2[i];
 		i++;
 	}
-	tmp[s1l + i] = '\0';
-	return (tmp);
+	return (tmp[s1l + i] = '\0', tmp);
 }
 // int main()
 // {

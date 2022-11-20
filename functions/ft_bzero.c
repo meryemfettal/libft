@@ -6,7 +6,7 @@
 /*   By: mfettal <mfettal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 15:10:21 by mfettal           #+#    #+#             */
-/*   Updated: 2022/10/14 10:37:40 by mfettal          ###   ########.fr       */
+/*   Updated: 2022/11/20 15:41:48 by mfettal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,3 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
-/* int main()
-{
-	char c[20] = "meryem fettal";
-	ft_bzero(c + 5, 6);
-	printf("%s",c);
-	return (0);
-}*/

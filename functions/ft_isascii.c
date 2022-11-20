@@ -6,7 +6,7 @@
 /*   By: mfettal <mfettal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 18:06:06 by mfettal           #+#    #+#             */
-/*   Updated: 2022/10/17 17:49:14 by mfettal          ###   ########.fr       */
+/*   Updated: 2022/11/20 15:43:52 by mfettal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,3 @@ int	ft_isascii(int c)
 	else
 		return (0);
 }
-// int main()
-// {
-//     int c = '1';
-//     printf("%d", ft_isacsii(c));
-//     return(0);
-// }

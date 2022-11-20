@@ -6,7 +6,7 @@
 /*   By: mfettal <mfettal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 12:07:23 by mfettal           #+#    #+#             */
-/*   Updated: 2022/10/21 18:43:16 by mfettal          ###   ########.fr       */
+/*   Updated: 2022/11/20 15:41:56 by mfettal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,15 +32,3 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (cd);
 }
-
-// int main()
-// {
-// 	char d[] = "geeksfor";
-// 	char s[] = "geeksforgeeks";
-// 	ft_memmove(d, s, 5);
-// 	printf("%s\n", d);
-// 	char d1[] = "geeksfor";
-// 	char s1[] = "geeksforgeeks";
-// 	memmove(d1, s1, 5);
-// 	printf("%s", d1);
-// }

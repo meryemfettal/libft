@@ -6,13 +6,13 @@
 /*   By: mfettal <mfettal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 11:35:17 by mfettal           #+#    #+#             */
-/*   Updated: 2022/10/30 17:10:09 by mfettal          ###   ########.fr       */
+/*   Updated: 2022/11/05 12:54:44 by mfettal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_count(const char *s, char c)
+static int	ft_count(const char *s, char c)
 {
 	int	i;
 	int	cpt;
@@ -31,7 +31,7 @@ int	ft_count(const char *s, char c)
 	return (cpt);
 }
 
-char	*allocate_for_word(const char *s, int start, int end)
+static char	*allocate_for_word(const char *s, int start, int end)
 {
 	char	*ptr;
 	int		i;
@@ -49,7 +49,7 @@ char	*allocate_for_word(const char *s, int start, int end)
 	return (ptr);
 }
 
-char	**ft_free(char **a)
+static char	**ft_free(char **a)
 {
 	int	i;
 

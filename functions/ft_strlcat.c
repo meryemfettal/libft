@@ -6,7 +6,7 @@
 /*   By: mfettal <mfettal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 16:42:06 by mfettal           #+#    #+#             */
-/*   Updated: 2022/10/26 17:54:07 by mfettal          ###   ########.fr       */
+/*   Updated: 2022/10/31 16:35:36 by mfettal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	if (dstsize == 0)
 		return (sl);
 	dl = ft_strlen(dst);
-	if (dstsize < dl)
+	if (dstsize <= dl)
 		return (dstsize + sl);
 	if (dstsize && dstsize > dl)
 	{
@@ -40,11 +40,21 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 
 // int main()
 // {
-// 	char dest[30]; memset(dest, 0, 30);
-//     char * src = (char *)"AAAAAAAAA";
-// 	dest[0] = 'B';
-// 	printf("%s\n", dest);
-// 	printf("%zu\t%s\n", ft_strlcat(dest, src, 1), dest);
-// 	printf("%zu\t%s\n", strlcat(dest, src, 1), dest);
+// 	// char dest[30]; memset(dest, 0, 30);
+//     // char * src = (char *)"AAAAAAAAA";
+// 	// dest[0] = 'B';
+// 	// printf("%s\n", dest);
+// 	// printf("%zu\t%s\n", ft_strlcat(dest, src, 1), dest);
+// 	// printf("%zu\t%s\n", strlcat(dest, src, 1), dest);
+// 	{
+// 		char dst[6] = "hello1";
+// 		char src[] = "hello2";
+// 		printf("%zu\t%s\n", ft_strlcat(dst, src, 6), dst);
+// 	}
+// 	// {
+// 	// 	char dst[6] = "hello1";
+// 	// 	char src[] = "hello2";
+// 	// 	printf("%zu\t%s\n", strlcat(dst, src, 6), dst);
+// 	// }
 // 	return (0);
 // }

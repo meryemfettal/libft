@@ -6,7 +6,7 @@
 /*   By: mfettal <mfettal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 18:05:49 by mfettal           #+#    #+#             */
-/*   Updated: 2022/10/14 10:48:33 by mfettal          ###   ########.fr       */
+/*   Updated: 2022/11/20 15:43:55 by mfettal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,3 @@ int	ft_isdigit(int c)
 	else
 		return (0);
 }
-// int main()
-// {
-//     int c = '0';
-//     printf("%d", ft_isdigit(c));
-//     return(0);
-// }

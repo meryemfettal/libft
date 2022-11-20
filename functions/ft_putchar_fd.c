@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfettal <mfettal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/06 15:29:35 by mfettal           #+#    #+#             */
-/*   Updated: 2022/11/20 15:55:12 by mfettal          ###   ########.fr       */
+/*   Created: 2022/11/03 18:00:35 by mfettal           #+#    #+#             */
+/*   Updated: 2022/11/09 19:54:54 by mfettal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	ft_putchar_fd(char c, int fd)
 {
-	size_t			i;
-	unsigned char	*cs;
-	unsigned char	*cd;
-
-	i = 0;
-	if (!dest && !src)
-		return (NULL);
-	cs = (unsigned char *)src;
-	cd = (unsigned char *)dest;
-	while (i < n)
-	{
-		cd[i] = cs[i];
-		i++;
-	}
-	return (cd);
+	write (fd, &c, 1);
 }
+
+// int main()
+// {
+// 	int	fd;
+// 	char c = 'd';
+// 	fd = open("test", O_RDWR | O_CREAT);
+// 	ft_putchar_fd(c, fd);
+// 	printf("%d", fd);
+// 	return (0);
+// }

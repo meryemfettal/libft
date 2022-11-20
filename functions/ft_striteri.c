@@ -1,32 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfettal <mfettal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/06 15:29:35 by mfettal           #+#    #+#             */
-/*   Updated: 2022/11/20 15:55:12 by mfettal          ###   ########.fr       */
+/*   Created: 2022/11/02 18:51:15 by mfettal           #+#    #+#             */
+/*   Updated: 2022/11/05 11:26:43 by mfettal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+// void    f(unsigned int i ,char *s)
+// {
+//     s[i] += i;
+// }
+
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	size_t			i;
-	unsigned char	*cs;
-	unsigned char	*cd;
+	int	i;
 
 	i = 0;
-	if (!dest && !src)
-		return (NULL);
-	cs = (unsigned char *)src;
-	cd = (unsigned char *)dest;
-	while (i < n)
+	if (!s)
+		return ;
+	while (s[i])
 	{
-		cd[i] = cs[i];
+		f(i, &s[i]);
 		i++;
 	}
-	return (cd);
+	return ;
 }
+
+// int main ()
+// {
+//     char m[]= "manar";
+//     ft_striteri(m,f);
+//     printf("%s",m);
+// }

@@ -6,7 +6,7 @@
 /*   By: mfettal <mfettal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 20:09:43 by mfettal           #+#    #+#             */
-/*   Updated: 2022/10/27 16:43:47 by mfettal          ###   ########.fr       */
+/*   Updated: 2022/11/05 12:20:20 by mfettal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ char	*ft_strrchr(const char *s, int c)
 
 	t = ft_strlen(s);
 	tmp = (char *)s;
-	if (c == 0)
+	if ((char)c == 0)
 		return (tmp + ft_strlen(tmp));
 	while (t--)
 	{
-		if (tmp[t] == (unsigned char)c)
+		if (tmp[t] == (char)c)
 		{
 			return (&tmp[t]);
 		}

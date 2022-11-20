@@ -26,22 +26,40 @@ SRC = 	ft_atoi.c\
 		ft_substr.c\
 		ft_strjoin.c\
 		ft_strtrim.c\
-		ft_split.c
+		ft_split.c\
+		ft_itoa.c\
+		ft_strmapi.c\
+		ft_striteri.c\
+		ft_putchar_fd.c\
+		ft_putstr_fd.c\
+		ft_putendl_fd.c\
+		ft_putnbr_fd.c
+
+SRC_B = ft_lstnew.c\
+		ft_lstadd_front.c\
+		ft_lstsize.c\
+		ft_lstlast.c
 
 CC = cc
 FLAGS = -Wall -Werror -Wextra
 EXC = $(SRC:.c=.o)
+EXC_B = $(SRC_B:.c=.o)
+
 all : $(NAME)
 
-$(NAME) : 	$(EXC) $(HEADER)
-			$(CC) $(FLAGS) -c $(SRC)
-			ar -rc $(NAME) $(EXC)
-			ranlib $(NAME)
+%.o : %.c $(HEADER)
+		$(CC) $(FLAGS) -c $<
+
+$(NAME) : $(EXC)
+		ar -rc $(NAME) $(EXC)
 
 clean :
-		rm -rf $(EXC)
+		rm -rf $(EXC) $(EXC_B)
 
 fclean : 	clean
 			rm -rf $(NAME)
 
-re : clean fclean all
+re : fclean all
+
+bonus : $(EXC_B)
+		ar -rc $(NAME) $(EXC_B)

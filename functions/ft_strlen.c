@@ -6,7 +6,7 @@
 /*   By: mfettal <mfettal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 18:20:08 by mfettal           #+#    #+#             */
-/*   Updated: 2022/10/14 11:20:02 by mfettal          ###   ########.fr       */
+/*   Updated: 2022/11/14 18:05:43 by mfettal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ size_t	ft_strlen(const char *s)
 // int main()
 // {
 // 	char a[20]="Program";
-// 	printf("Length of string a = %zu \n",strlen(a));
+// 	printf("Length of string a = %zu \n",ft_strlen(a));
 // }

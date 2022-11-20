@@ -6,7 +6,7 @@
 /*   By: mfettal <mfettal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 15:40:28 by mfettal           #+#    #+#             */
-/*   Updated: 2022/10/14 10:52:26 by mfettal          ###   ########.fr       */
+/*   Updated: 2022/11/20 15:46:36 by mfettal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-
-// int main()
-// {
-// 	char s[] = "test";
-// 	char d[] = "tedt";
-// 	printf("%d\n", ft_memcmp(s, d, 4));
-// 	printf("%d", memcmp(s, d, 4));
-// 	return (0);
-// }

@@ -6,7 +6,7 @@
 /*   By: mfettal <mfettal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 16:13:12 by mfettal           #+#    #+#             */
-/*   Updated: 2022/10/26 10:58:11 by mfettal          ###   ########.fr       */
+/*   Updated: 2022/10/31 16:47:42 by mfettal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 // int main()
 // {
 // 	char s[] = "geeksforgeeks";
-// 	char h[] = "dest";
+// 	char h[] = "for";
 // 	printf("%s\n", ft_strnstr(s, h, 20));
 // 	printf("%s", strnstr(s, h, 20));
 // 	return (0);

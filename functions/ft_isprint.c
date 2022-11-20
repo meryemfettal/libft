@@ -6,7 +6,7 @@
 /*   By: mfettal <mfettal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 18:15:09 by mfettal           #+#    #+#             */
-/*   Updated: 2022/10/19 14:21:36 by mfettal          ###   ########.fr       */
+/*   Updated: 2022/11/20 15:43:58 by mfettal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,3 @@ int	ft_isprint(int c)
 	else
 		return (0);
 }
-// int main()
-// {
-//     int c = 'f';
-//     printf("%d", ft_isprint(c));
-//     return(0);
-// }

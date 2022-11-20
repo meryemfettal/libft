@@ -1,41 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfettal <mfettal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/11 18:41:13 by mfettal           #+#    #+#             */
-/*   Updated: 2022/11/05 12:18:12 by mfettal          ###   ########.fr       */
+/*   Created: 2022/11/09 20:00:18 by mfettal           #+#    #+#             */
+/*   Updated: 2022/11/14 18:41:37 by mfettal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+int	ft_lstsize(t_list *lst)
 {
-	int		i;
-	char	*tmp;
+	t_list	*tmp;
+	int		cpt;
 
-	tmp = (char *)s;
-	i = 0;
-	if ((char)c == 0)
-		return (tmp + ft_strlen(tmp));
-	while (tmp[i])
+	if (!lst)
+		return (0);
+	cpt = 0;
+	tmp = lst;
+	while (tmp)
 	{
-		if (tmp[i] == (char)c)
-		{
-			return (&tmp[i]);
-		}
-		i++;
+		cpt++;
+		tmp = tmp->next;
 	}
-	return (NULL);
+	return (cpt);
 }
-
-// int main ()
+// int main()
 // {
-//    char str[] = "tripouille";
-//    char ch = 0;
-//    printf("%s",ft_strchr(str, ch));
-//    return(0);
+// 	t_list	*head;
+
+// 	head = NULL;
+// 	ft_lstadd_front(&head, ft_lstnew("test1"));
+// 	ft_lstadd_front(&head, ft_lstnew("test2"));
+// 	ft_lstadd_front(&head, ft_lstnew("test3"));
+// 	while (head)
+// 	{
+// 		printf("%s\n",head->content);
+// 		head = head->next;
+// 	}
 // }

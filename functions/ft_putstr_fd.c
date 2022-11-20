@@ -1,32 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfettal <mfettal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/06 15:29:35 by mfettal           #+#    #+#             */
-/*   Updated: 2022/11/20 15:55:12 by mfettal          ###   ########.fr       */
+/*   Created: 2022/11/03 18:41:13 by mfettal           #+#    #+#             */
+/*   Updated: 2022/11/05 11:26:33 by mfettal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	ft_putstr_fd(char *s, int fd)
 {
-	size_t			i;
-	unsigned char	*cs;
-	unsigned char	*cd;
+	int	i;
 
 	i = 0;
-	if (!dest && !src)
-		return (NULL);
-	cs = (unsigned char *)src;
-	cd = (unsigned char *)dest;
-	while (i < n)
+	if (!s)
+		return ;
+	while (s[i])
 	{
-		cd[i] = cs[i];
+		write (fd, &s[i], 1);
 		i++;
 	}
-	return (cd);
 }
+// int main()
+// {
+// 	int	fd;
+// 	char *c = "meryem";
+// 	fd = open("tdr", O_RDWR | O_CREAT);
+// 	ft_putstr_fd(c, fd);
+// 	printf("%d", fd);
+// 	return (0);
+// }

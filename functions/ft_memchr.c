@@ -6,7 +6,7 @@
 /*   By: mfettal <mfettal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 16:31:45 by mfettal           #+#    #+#             */
-/*   Updated: 2022/10/27 10:50:11 by mfettal          ###   ########.fr       */
+/*   Updated: 2022/11/20 15:45:22 by mfettal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,13 +31,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-// int main()
-// {
-// 	char s[] = "geeksforgeeks";
-// 	// int p[] = {5623, 64, 98, 5, 69};
-// 	// printf("%s\n", memchr(p, 64, 4 * sizeof(int)));
-// 	// printf("%s", ft_memchr(p, 64, 4 * sizeof(int)));
-// 	printf("%s\n",ft_memchr(s, 'k', 10));
-// 	printf("%s",memchr(s, 'k', 10));
-// 	return (0);
-// }

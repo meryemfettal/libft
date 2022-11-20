@@ -6,7 +6,7 @@
 /*   By: mfettal <mfettal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 18:05:34 by mfettal           #+#    #+#             */
-/*   Updated: 2022/10/14 10:42:26 by mfettal          ###   ########.fr       */
+/*   Updated: 2022/11/20 15:43:49 by mfettal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,3 @@ int	ft_isalpha(int c)
 	else
 		return (0);
 }
-// int main()
-// {
-//     int c = 'a';
-//     printf("%d", ft_isalpha(c));
-//     return(0);
-// }

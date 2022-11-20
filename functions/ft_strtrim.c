@@ -6,27 +6,27 @@
 /*   By: mfettal <mfettal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 15:51:24 by mfettal           #+#    #+#             */
-/*   Updated: 2022/10/29 12:20:38 by mfettal          ###   ########.fr       */
+/*   Updated: 2022/11/05 13:00:54 by mfettal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_search(char c, char *s)
+static int	ft_search(char c, char *s)
 {
 	while (*s)
 	{
 		if (*s == c)
 			return (1);
-			s++;
+		s++;
 	}
 	return (0);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	start;
-	size_t	end;
+	int	start;
+	int	end;
 
 	if (!s1 || !set)
 		return (NULL);
@@ -36,6 +36,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 		start++;
 	while (end > start && ft_search(s1[end], (char *)set))
 		end--;
+	if (ft_strlen(s1) == 0)
+		return (ft_substr(s1, start, 0));
 	return (ft_substr(s1, start, (end - start + 1)));
 }
 // int main()
